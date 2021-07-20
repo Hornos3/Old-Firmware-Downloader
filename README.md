@@ -7,6 +7,7 @@ Downloaded files will be put in the folder where you put our code into. When you
 Also, this project can sort those files decompressed from zip files into different suffixes, convenient for us all to find them.
 
 Here are modules need you to install in your python virtual environment:
-pip install requests
-pip install Zipfile
-pip install psycopg2
+*** pip install requests ***
+*** pip install Zipfile  ***
+*** pip install psycopg2 ***
+*** pip install rarfile  ***
