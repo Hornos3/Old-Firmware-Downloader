@@ -2,7 +2,7 @@
 import requests
 import re
 import os
-import Zipfile
+import Decpfile
 from math import *
 # 本函数获得的参数是一个含有两个列表的参数，第一个列表为url列表，第二个列表为文件大小列表
 def download(data_src, event, counter, mode):
@@ -41,5 +41,10 @@ def download(data_src, event, counter, mode):
         choice = input('***[Thread 2]*** zip files have been downloaded.'
                        'Do you want to decompress them? input y or n to give your choice: ')
         if choice == 'y':
-            Zipfile.decompress(filenames)
+            Decpfile.decompress(filenames, 'zip')
+    elif mode == "rar" or mode == "RAR":
+        choice = input('***[Thread 2]*** rar files have been downloaded.'
+                       'Do you want to decompress them? input y or n to give your choice: ')
+        if choice == 'y':
+            Decpfile.decompress(filenames, 'rar')
     print('***[Thread 2]*** Finished.')
