@@ -21,10 +21,6 @@ def download(data_src, event, counter, mode):
         length = datas[1]
         print('\n***[Thread 2]*** Downloading...')
         response = requests.get(url=data, headers=headers)
-        # path = os.path.dirname(os.path.realpath(__file__))
-        # with open('D://编程学习//Python PyCharm//FD_byAgCl//' + data, "wb") as d:
-        #     for dt in tqdm(response.iter_content(chunk_size=1024)):
-        #         d.write(dt)
         print("\n***[Thread 2]*** " + data + ' downloaded' + ', count = %d, size = %.3f MB'
               % (count + 1, length / 0x100000))
         File_Name = './Firmwares/' + re.sub("',\\)", '', re.split('/', str(data))[-1])
